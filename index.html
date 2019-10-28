@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ProsParts</title>
+       <meta name="description" content="prosparts admin page shows the data information of users">
+      <link rel="shortcut icon" type="image/png" href="images/pa-logo.png">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.5/css/rowReorder.dataTables.min.css"/>
+      <link rel="stylesheet" type="text/css" href="css/table-responsive.css"/>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <style type="text/css">
+         .pa-thishide{
+            display: none!important;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="pa-dash-cont">
+         <div class="pa-leftnav-cont">
+            <ul class="pa-leftlink-list">
+               <li class="pa-linkactive">
+                  <a href="javascript:void(0)">home</a>
+               </li>
+               <li><a href="javascript:void(0)">Purchasing Portal</a></li>
+               <li><a href="javascript:void(0)">Accounting Portal</a></li>
+               <li><a href="javascript:void(0)">Warehouse Portal</a></li>
+               <li><a href="javascript:void(0)">Website Admin Portal</a></li>
+               <li><a href="javascript:void(0)">My Website Orders</a></li>
+               <li><a href="javascript:void(0)">My Quotes</a></li>
+               <li><a href="javascript:void(0)">My Quote Cart</a></li>
+               
+               <li><a href="javascript:void(0)">My Tasks</a></li>
+               <li><a href="javascript:void(0)">My Tasks Cart</a></li>
+               <li><a href="javascript:void(0)">My Back Orders</a></li>
+               
+               <li><a href="javascript:void(0)">My Activities (0)</a></li>
+               <li><a href="javascript:void(0)">My Tasks (0)</a></li>
+               <li><a href="javascript:void(0)">Parts Manuals Search</a></li>
+               <li><a href="javascript:void(0)">Pad-Cover Search</a></li>
+               <li><a href="javascript:void(0)">Coil Search</a></li>
+               <li><a href="javascript:void(0)">Gasket Search</a></li>
+               <li><a href="javascript:void(0)">Brand Suppliers Search</a></li>
+               <li><a href="javascript:void(0)">Accessories</a></li>
+               <li><a href="javascript:void(0)"> Suppliers</a></li>
+               <li><a href="javascript:void(0)">Freight Calculator</a></li>
+               <li><a href="javascript:void(0)">Customer Search</a></li>
+               <li><a href="javascript:void(0)">Customer Relationships</a></li>
+               <li><a href="javascript:void(0)"> Service Locator</a></li>
+               <li><a href="javascript:void(0)">UPS Delivery Map</a></li>
+               <li><a href="javascript:void(0)"> Document Library</a></li>
+               <li><a href="javascript:void(0)">Industry Links</a></li>
+               <li><a href="javascript:void(0)">Login</a></li>
+               <li><a href="javascript:void(0)">Logout</a></li>
+               <li><a href="javascript:void(0)" id="staffPhoneNo"> Staff Phone Numbers</a></li>
+            </ul>
+         </div>
+         <div class="pa-rightnav-cont">
+            <div class="pa-wrapper-cont">
+               <div class="pa-customer-information">
+                  <div class="pa-updatedt">
+                     <p>Last Update Date <span>2019/05/30</span></p>
+                      <p>Last Update Time<span>2
+                      :40 PM</span></p>
+                  </div>
+                  <div class="pa-edit-forms">
+                     <ul class="list-inline pa-top-list">
+                        <li>
+                           <a href="javascript:void(0)"> CLEAR</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">ORDERS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">RETURNS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">QUOTES</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">INVOICES</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">TASKS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">PAPERLESS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">RELATIONSHIP</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="pa-customer-infoName">
+                     <div class="pa-cinfo">
+                        <p class="pa-downarrow">
+                           <i class="fas fa-angle-double-down">
+                        </i></p>
+                        <ul class="list-inline pa-cinfolist">
+                            <li>
+                              <span>Customer Number :</span> <span> 0016128</span>
+                           </li>
+                           <li>
+                              <span> Customer  Name  :</span> <span>Lakehead Cleaners</span>
+                           </li>
+                            <li>
+                              <span> Salesman Name  :</span> <span>  Donald  </span>
+                           </li>
+                           <li>
+                              <span> Contact Name  :</span> <span> Joe Smith Silver     </span>
+                           </li>
+<!--                            <li class="thishide">
+                              <span> Customer Number  :</span> <span>(807) 345-2295</span>
+                           </li> -->
+<!--                            <li class="thishide">
+                              <span> Credit card Type  :</span> <span>VISA / MC</span>
+                           </li> -->
+                           <li class="thishide">
+                              <span>Address 1  :</span> <span>430 Waterlo St S</span>
+                           </li>
+                           <li class="thishide">
+                              <span>Address 2  :</span> <span>430 Waterlo St S</span>
+                           </li>
+                           <li class="thishide">
+                              <span>City :</span> <span>thunders Bay</span>
+                           </li>
+                            <li class="thishide">
+                              <span>State :</span> <span>thunders Bay  ,ON P7E6E4 CAN</span>
+                           </li>
+                            <li class="thishide">
+                              <span>Zip :</span> <span> P7E6E4</span>
+                           </li>
+                           <li class="thishide">
+                              <span>Country :</span> <span> CAN</span>
+                           </li>
+                            <li class="thishide">
+                              <span>Terms :</span> <span> ON P7E6E4</span>
+                           </li>
+                           <li class="thishide">
+                              <span> Price Level :</span> <span> ON P7E6E4</span>
+                           </li>
+                           <li class="thishide">
+                              <span>Customer Number :</span> <span> 0000000000</span>
+                           </li>
+                           <li class="thishide">
+                              <span> Customer Email  :</span> <span>purchasing@lakeheadcleaners.ca</span>
+                           </li>
+                         <!--   <li class="thishide">
+                              <span> Customer Frieght info  :</span> <span>PACKAGE  UPS GRD</span>
+                           </li> -->
+                          
+                        </ul>
+                         <div class="pa-datainfo pa-scdata thishide" >
+                        <table id="pa-table" class="display nowrap" >
+                           <thead>
+                              <tr>
+                                 <th>Credit Card Type </th>
+                                 <th>Last Four Digits </th>
+                                 <th>Expiration Date </th>
+                                 <th> Security Code</th>
+                                 <th>Name on Card </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>MC</td>
+                                 <td>7714</td>
+                                 <td>10/2021</td>
+                                 <td>558</td>
+                                 <td>Joe Peuhkuri</td>
+                              </tr>
+                              <tr>
+                                 <td>VISA</td>
+                                 <td>6195</td>
+                                 <td>06/2021</td>
+                                 <td>806</td>
+                                 <td>Lakehead Cleaners</td>
+                              </tr>
+                              <tr>
+                                 <td>MC</td>
+                                 <td>7714</td>
+                                 <td>10/2021</td>
+                                 <td>558</td>
+                                 <td>Joe Peuhkuri</td>
+                              </tr>
+                             
+                           </tbody>
+                        </table>
+                     </div>
+                     </div>
+                  </div>
+                  <div class="pa-customerdataTable">
+                    
+                     <div class="pa-form-elements">
+                        <form class="pa-ppinfom pp-customersc">
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="text" name="text" autocomplete="off" placeholder="Zip Code ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="Number" name="text" autocomplete="off" placeholder=" Customer # ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="text" name="text" autocomplete="off" placeholder="Customer Name ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="text" name="text" autocomplete="off" placeholder="Customer Phone ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="Email" name="text" autocomplete="off" placeholder="Customer Email Address">
+                           </div>
+                           <div class="pa-form-group pa-sss pa-six">
+                              <input type="submit" name="text" class="pa-submit" value="go">
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="pa-vendor-info">
+                  <div class="pa-edit-forms">
+                     <ul class="list-inline pa-top-list">
+                        <li>
+                           <a href="javascript:void(0)"> CLEAR</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">ORDERS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)"> INVOICES </a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">TASKS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">UPS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">REORDER</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">PAPERLESS</a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">RELATIONSHIP </a>
+                        </li>
+                        <li>
+                           <a href="javascript:void(0)">EXTENDED</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="pa-customer-infoName">
+                     <div class="pa-cinfo">
+                        <p class="pa-downarrow">
+                           <i class="fas fa-angle-double-down">
+                        </i></p>
+                        <ul class="list-inline">
+                           
+                           <li>
+                              <span> Vendor Number  :</span><span>1234</span>
+                           </li>
+                           <li>
+                              <span>Vendor Name  : </span><span>Williams</span>
+                           </li>
+                           <li>
+                              <span>Contact Name :  </span><span> Louis</span>
+                           </li>
+                           <li>
+                              <span>Contact Phone Number :</span><span> 4455887766</span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="pa-customerdataTable">
+                     <div class="pa-datainfo">
+                        <table id="pa-table1" class="display nowrap" >
+                           <thead>
+                              <tr>
+                                 <th>Address 1 </th>
+                                 <th>Address 2</th>
+                                 <th>City</th>
+                                 <th> State</th>
+                                 <th>Zip</th>
+                                 <th> Country</th>
+                                 <th>Terms </th>
+                                 <th>Price Level </th>
+                                 <th>Phone Number</th>
+                                 <th>Email Address</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="pa-form-elements">
+                        <form class="pa-ppinfom pp-customersc">
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="text" name="text" autocomplete="off" placeholder="Zip Code ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="Number" name="text" autocomplete="off" placeholder=" Vendor #  ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="text" name="text" autocomplete="off" placeholder="Vendor Name  ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="text" name="text" autocomplete="off" placeholder="Brand Supported ">
+                           </div>
+                           <div class="pa-form-group pa-six">
+                              
+                              <input type="Email" name="text" autocomplete="off" placeholder="Vendor Email Address ">
+                           </div>
+                           <div class="pa-form-group pa-sss pa-six">
+                              <input type="submit" name="text" class="pa-submit" value="go">
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <div class="pa-prossearch">
+                  <div class="pa-aps">
+                     <form class="pa-ppinfom">
+                        <div class="pa-form-group pa-xz">
+                           
+                           <input type="text" name="text" autocomplete="off" placeholder="Pros#">
+                        </div>
+                        <div class="pa-form-group pa-xz">
+                           
+                           <input type="text" name="text" autocomplete="off" placeholder="Alias#">
+                        </div>
+                        <div class="pa-form-group PA-CCBX pa-ccbxa">
+                           <label>Exact</label>
+                           <label class="pa-p-list">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="pa-form-group PA-CCBX pa-ccbxa">
+                           <label>Sage</label>
+                           <label class="pa-p-list">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="pa-form-group PA-CCBX pa-ccbxa">
+                           <label>P/L</label>
+                           <label class="pa-p-list">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="pa-form-group pa-plgrp pa-xz">
+                           <label>Price List</label>
+                           <select>
+                              <option>All Price List</option>
+                              <option>All Price List11</option>
+                              <option>All Price List</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                           </select>
+                        </div>
+                        <div class="pa-form-group  pa-sss1 pa-xz">
+                           <input type="submit" name="text" class="pa-submit pa-alissub" value="go">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="pa-kws">
+                     <form class="pa-ppinfom">
+                        <div class="pa-form-group pa-six1">
+                           
+                           <input type="text" name="text" autocomplete="off" placeholder="Keyword 1">
+                        </div>
+                        <div class="pa-form-group pa-six1">
+                           
+                           <input type="text" name="text" autocomplete="off" placeholder="Keyword 2">
+                        </div>
+                        <div class="pa-form-group   pa-six1 ">
+                           
+                           <input type="text" name="text" autocomplete="off" placeholder="Keyword 3">
+                        </div>
+                        <div class="pa-form-group pa-selt">
+                           
+                           <select>
+                              <option>EQ</option>
+                              <option>NE</option>
+                           </select>
+                        </div>
+                        <div class="pa-form-group  pa-six1">
+                           
+                           <input type="text" name="text" autocomplete="off" placeholder="Keyword 4">
+                        </div>
+                        <div class="pa-form-group pa-sss2 pa-six1">
+                           <input type="submit" name="text" class="pa-submit" value="go">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="pa-vsn">
+                     <form class="pa-ppinfom">
+                        <div class="pa-form-group pa-six2">
+                           <label>Manufacturer Brand</label>
+                           <select>
+                              <option>All Price List</option>
+                              <option>All Price List11</option>
+                              <option>All Price List</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                           </select>
+                        </div>
+                        <div class="pa-form-group pa-six2">
+                           <label>Component Brand </label>
+                           <select>
+                              <option>All Price List</option>
+                              <option>All Price List11</option>
+                              <option>All Price List</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                           </select>
+                        </div>
+                        <div class="pa-form-group pa-six2">
+                           <label>Product Type </label>
+                           <select>
+                              <option>All Price List</option>
+                              <option>All Price List11</option>
+                              <option>All Price List</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                           </select>
+                        </div>
+                        <div class="pa-form-group pa-six2">
+                           <label>Vendor Name</label>
+                           <select>
+                              <option>All Price List</option>
+                              <option>All Price List11</option>
+                              <option>All Price List</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                              <option>American Laundry</option>
+                           </select>
+                        </div>
+                        <div class="pa-form-group pa-ccbxa1 PA-CCBX pa-cbs">
+                           <label>Primary</label>
+                           <label class="pa-p-list">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                        <div class="pa-form-group pa-sss pa-six2">
+                           <input type="submit" name="text" class="pa-submit" value="go">
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+      <div class="overlay"></div>
+      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/rowreorder/1.2.5/js/dataTables.rowReorder.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+      <script>
+      $('.pa-leftlink-list >li >a').click(function(){
+      $(this).parent().addClass('pa-linkactive');
+      $(this).parent().siblings().removeClass('pa-linkactive')
+      })
+      $('.pa-downarrow').click(function(){
+      $(this).toggleClass('pa-cont-open');
+      $(this).siblings().toggleClass('pacopen');
+      $(this).parent().parent().siblings().toggleClass('pa-contcls');
+      $(this).parent().parent().toggleClass('pa-bgclr');
+       $(this).siblings().find('.thishide').toggleClass('pa-thishide');
+       $(this).siblings('.thishide').toggleClass('pa-thishide');
+
+      })
+      $('.pa-imgcontc').click(function(){
+      $(this).toggleClass('pa-cont-open');
+      $(this).parent().toggleClass('pa-hide');
+       $('.thishide').removeClass('pa-thishide');
+      })
+      $('.pa-ctask').click(function(){
+      $('body').addClass('pa-popopen')
+      })
+      $('.overlay , .pa-tclose').click(function(){
+      $('body').removeClass('pa-popopen')
+      })
+      $('.pa-cactivities').click(function(){
+      $('body').addClass('pa-popopen1')
+      })
+      $('.overlay  , .pa-tclose').click(function(){
+      $('body').removeClass('pa-popopen1')
+      })
+      </script>
+      <script>
+   
+      $(document).ready(function() {
+
+           $('#pa-table1').DataTable( {
+              "scrollY":        "200px",
+               "scrollX":       "200px",
+              "scrollCollapse": true,
+              "paging":         false
+          } );
+           $('#staffPhoneNo').click(function(){
+                  $.ajax({
+                     type: "POST",
+                     dataType: "html",
+                     url: "numbers.html",
+                     data: { },
+                     success: function (data) {
+                              $(".pa-wrapper-cont").html(data);
+                           }  
+                  });
+               });
+           $('#datanumber').click(function(){
+                  $.ajax({
+                     type: "POST",
+                     dataType: "html",
+                     url: "datainfo.html",
+                     data: { },
+                     success: function (data) {
+                              $(".pa-wrapper-cont").html(data);
+                           }  
+                  });
+               });
+      // } );
+      // $('#datanumber').click(function(){
+      //    $.ajax({
+      //       type:'POST',
+      //       datatype:'html',
+      //       url:'datainfo.html',
+      //       data: { },
+      //       success: function(data){
+      //          $('.pa-wrapper-cont').html(data);
+      //       }
+      //    })
+      // })
+      </script>
+   </body>
+</html>

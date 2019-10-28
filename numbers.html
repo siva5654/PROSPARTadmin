@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ProsParts</title>
+      <link rel="shortcut icon" type="image/png" href="images/pa-logo.png">
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div class="contact-numbers">
+        <span class="adNew">ADD NEW NAME</span>
+        <div class="addname">
+            <input type="text" name="Enter the Name" placeholder="Enter the Name" class=g"sc-adname" required="">
+            <div class="cscname scforward cnoap">
+                <button class="next">NEXT</button>
+            </div>
+            <div class="cscname csbawd">
+                <button class="cancel">CANCEL</button>
+            </div>
+        </div>
+        <div class="cust-info-numers">
+            <form action="" method="post" id="userPhoneInfo">
+                <div class="cform-grp">
+                    <label>Primary DID</label>
+                    <input type="text" name="PrimaryDID" maxlength="15" class="cform-val" required autocomplete="off">
+                </div>
+                <div class="cform-grp">
+                    <label>Google Voice</label>
+                    <input type="text" name="GoogleVoice" maxlength="15" class="cform-val" required autocomplete="off">
+                </div>
+                <div class="cform-grp">
+                    <label>Google Voice Email</label>
+                    <input type="text" name="GoogleVoiceEmail" maxlength="20" class="cform-val" required autocomplete="off">
+                </div>
+                <div class="cform-grp">
+                    <label>Efax</label>
+                    <input type="text" name="Efax" maxlength="15" class="cform-val" required autocomplete="off">
+                </div>
+                <div class="cform-grp">
+                    <label>Cell</label>
+                    <input type="text" name="Cell" maxlength="15" class="cform-val" required autocomplete="off">
+                </div>
+                <div class="cform-grp">
+                    <label>Ooma </label>
+                    <input type="text" name="Ooma" maxlength="15" class="cform-val" required autocomplete="off">
+                </div>
+                <div class="cform-grp">
+                    <input type="submit" name="submit" value="SAVE">
+                </div>
+
+            </form>
+        </div>
+    </div>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script>
+	    $('.adNew').click(function(){
+        $('.addname').addClass('pCopen');
+    });
+    $('.cscname .cancel').click(function(){
+        $('.addname').removeClass('pCopen');
+        $('.sc-adname').val('');
+        $('.cust-info-numers').removeClass('pCopen');
+        $('#userPhoneInfo .cform-val').val('');
+    });
+       $('.cancel').click(function(){
+        $('.scforward').addClass('cnoap');
+    });
+    $('.sc-adname').keyup(function(){
+        var val = $(this).val().length;
+
+        if( val == 0 ){
+            $('.cscname').addClass('cnoap');
+             $('.csbawd').removeClass('cnoap');
+            $('.cust-info-numers').removeClass('pCopen');
+            $('#userPhoneInfo .cform-val').val('');
+
+        } else {
+            $('.cscname').removeClass('cnoap');
+        }
+    });
+    $('.cscname .next').click(function(){
+        $('.cust-info-numers').addClass('pCopen');
+    });
+
+    $("#userPhoneInfo").submit(function(){
+        alert("Your data saved successfully.")
+    })
+	</script>
+</body>
+</html>
